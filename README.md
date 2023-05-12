@@ -47,7 +47,7 @@ To run the Neural Tumour Classifier, you will need to download the pretrained Re
 ```shell
    pip install jupyter notebook
 ```
-2. Open the reset.ipynb Jupyter Notebook.
+2. Open the ResNet152V2.ipynb Jupyter Notebook.
 3. Run the notebook cells sequentially by clicking on Cell and selecting Run All.
 4. After running all the cells, the resnet.h5 file will be generated in the same directory as the notebook.
 
