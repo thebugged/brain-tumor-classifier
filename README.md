@@ -18,7 +18,7 @@ Neural Tumor Classifier is designed to assist in the classification of brain tum
 ## Installation
 1. Clone the repository:
 ```shell
-git clone https://github.com/your-username/neural-tumor-classifier.git
+git clone https://github.com/thebugged/neural-tumor-classifier.git
 ```
 
 2. Change into the project directory: 
@@ -57,13 +57,13 @@ Make sure to place the resnet.h5 file in the same directory as the Streamlit app
 1. Access the Mega link to download the pretrained model by clicking [here](https://mega.nz/folder/46QwiSCY#kTgCWkBJFQ1durISD71zqQ).
 2. Click on the download button to save the `resnet.h5` file to your local machine.
 
-Make sure to place the `resnet.h5` file in the same directory as the Streamlit app (`app.py`) before running the application.
+Make sure to place the `resnet.h5` file in the same directory as the Streamlit app (`mainapp.py`) before running the application.
 
 ## Running the App
 Run the Streamlit application using the following command:
 
 ```shell
-streamlit run app.py
+streamlit run mainapp.py
 ```
 The application will be available in your browser at http://localhost:8501.
 
