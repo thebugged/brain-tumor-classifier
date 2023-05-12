@@ -31,6 +31,34 @@ cd neural-tumor-classifier
 pip install -r requirements.txt
 ```
 
+
+## Dataset
+The dataset used for training the neural tumor classifier is available on Kaggle. You can download it from the following link:
+
+[Neural Tumor Classifier Dataset on Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
+
+
+## AI Model
+To run the Neural Tumour Classifier, you will need to download the pretrained ResNet152V2 model in .h5 format. You have two options to obtain the model:
+
+
+### Option 1: Running Jupyter Notebook
+1. Ensure you have Jupyter Notebook installed. If not, you can install it using the following command:
+```shell
+   pip install jupyter notebook
+```
+2. Open the reset.ipynb Jupyter Notebook.
+3. Run the notebook cells sequentially by clicking on Cell and selecting Run All.
+4. After running all the cells, the resnet.h5 file will be generated in the same directory as the notebook.
+
+Make sure to place the resnet.h5 file in the same directory as the Streamlit app (app.py) before running the application.
+
+### Option 2: Download from Mega
+1. Access the Mega link to download the pretrained model by clicking [here](https://mega.nz/folder/46QwiSCY#kTgCWkBJFQ1durISD71zqQ).
+2. Click on the download button to save the `resnet.h5` file to your local machine.
+
+Make sure to place the `resnet.h5` file in the same directory as the Streamlit app (`app.py`) before running the application.
+
 ## Running the App
 Run the Streamlit application using the following command:
 
@@ -38,11 +66,4 @@ Run the Streamlit application using the following command:
 streamlit run app.py
 ```
 The application will be available in your browser at http://localhost:8501.
-
-
-## Dataset
-The dataset used for training the neural tumor classifier is available on Kaggle. You can download it from the following link:
-
-[Neural Tumor Classifier Dataset on Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
-
 
