@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 
 ## Dataset
-The dataset used for training the neural tumor classifier is available on Kaggle. You can download it from the following link:
+The dataset used for training the brain tumor classifier is available on Kaggle. You can download it from the following link:
 
 [Brain Tumor Classifier Dataset on Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
 
