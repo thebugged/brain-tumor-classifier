@@ -18,7 +18,7 @@ def init_db(conn: Connection):
 
 def build_sidebar():
     st.sidebar.markdown("### Function")
-    st.sidebar.markdown("Neural Tumor Classifier is a web application that processes MRI scans to determine the type of tumor present (Glioma, Meningioma, Pituitary) or if there is no tumor present.")
+    st.sidebar.markdown("Brain Tumor Classifier is a web application that processes MRI scans to determine the type of tumor present (Glioma, Meningioma, Pituitary) or if there is no tumor present.")
     st.sidebar.markdown("---")
     st.sidebar.markdown("### How to Use")
     st.sidebar.markdown("1. Upload an MRI scan (in PNG, JPG, or JPEG format).")
@@ -30,7 +30,7 @@ def build_sidebar():
 def app():
     model = load_model('resnet.h5')
 
-    st.title("Neural Tumor Classifier")
+    st.title("Brain Tumor Classifier")
     st.markdown("")
     st.markdown("")
 
