@@ -9,7 +9,7 @@ from keras.models import load_model
 
 URI_SQLITE_DB = "predictions.db"
 
-st.set_page_config(page_title="NTC", page_icon="favicon.png")
+st.set_page_config(page_title="BTC", page_icon="favicon.png")
 
 def init_db(conn: Connection):
     conn.execute('CREATE TABLE IF NOT EXISTS userstable(PREDICTION TEXT)')

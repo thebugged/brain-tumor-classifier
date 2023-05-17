@@ -1,13 +1,13 @@
 
-![Brain Tumor Classifier](screenshot.png)
+![Neural Tumor Classifier](screenshot.png)
 
 ## 
-# Brain Tumor Classifier
-Brain Tumor Classifier is a web application that processes MRI scans to determine the type of tumor present (Glioma, Meningioma, Pituitary) or if there is no tumor present.
+# Neural Tumor Classifier
+Neural Tumor Classifier is a web application that processes MRI scans to determine the type of tumor present (Glioma, Meningioma, Pituitary) or if there is no tumor present.
 
 
 ## Function
-Brain Tumor Classifier is designed to assist in the classification of brain tumors using convolutional neural networks (CNN). The application takes an MRI scan as input and applies a trained ResNet152V2 model to predict the type of tumor or indicate the absence of a tumor. It provides a quick and convenient way to analyze MRI scans and obtain tumor classification results.
+Neural Tumor Classifier is designed to assist in the classification of brain tumors using convolutional neural networks. The application takes an MRI scan as input and applies a trained ResNet152V2 model to predict the type of tumor or indicate the absence of a tumor. It provides a quick and convenient way to analyze MRI scans and obtain tumor classification results.
 
 
 ## How to Use
@@ -18,7 +18,7 @@ Brain Tumor Classifier is designed to assist in the classification of brain tumo
 ## Installation
 1. Clone the repository:
 ```shell
-git clone https://github.com/thebugged/brain-tumor-classifier.git
+git clone https://github.com/your-username/neural-tumor-classifier.git
 ```
 
 2. Change into the project directory: 
@@ -33,13 +33,13 @@ pip install -r requirements.txt
 
 
 ## Dataset
-The dataset used for training the brain tumor classifier is available on Kaggle. You can download it from the following link:
+The dataset used for training the neural tumor classifier is available on Kaggle. You can download it from the following link:
 
-[Brain Tumor Classifier Dataset on Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
+[Neural Tumor Classifier Dataset on Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
 
 
 ## AI Model
-To run the Brain Tumour Classifier, you will need to download the pretrained ResNet152V2 model in .h5 format. You have two options to obtain the model:
+To run the Neural Tumour Classifier, you will need to download the pretrained ResNet152V2 model in .h5 format. You have two options to obtain the model:
 
 
 ### Option 1: Running Jupyter Notebook
@@ -47,7 +47,7 @@ To run the Brain Tumour Classifier, you will need to download the pretrained Res
 ```shell
    pip install jupyter notebook
 ```
-2. Open the ResNet152V2.ipynb Jupyter Notebook.
+2. Open the reset.ipynb Jupyter Notebook.
 3. Run the notebook cells sequentially by clicking on Cell and selecting Run All.
 4. After running all the cells, the resnet.h5 file will be generated in the same directory as the notebook.
 
@@ -57,13 +57,13 @@ Make sure to place the resnet.h5 file in the same directory as the Streamlit app
 1. Access the Mega link to download the pretrained model by clicking [here](https://mega.nz/folder/46QwiSCY#kTgCWkBJFQ1durISD71zqQ).
 2. Click on the download button to save the `resnet.h5` file to your local machine.
 
-Make sure to place the `resnet.h5` file in the same directory as the Streamlit app (`mainapp.py`) before running the application.
+Make sure to place the `resnet.h5` file in the same directory as the Streamlit app (`app.py`) before running the application.
 
 ## Running the App
 Run the Streamlit application using the following command:
 
 ```shell
-streamlit run mainapp.py
+streamlit run app.py
 ```
 The application will be available in your browser at http://localhost:8501.
 
