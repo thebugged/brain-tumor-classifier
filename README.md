@@ -18,7 +18,7 @@ Brain Tumor Classifier is designed to assist in the classification of brain tumo
 ## Installation
 1. Clone the repository:
 ```shell
-git clone https://github.com/thebugged/neural-tumor-classifier.git
+git clone https://github.com/thebugged/brain-tumor-classifier.git
 ```
 
 2. Change into the project directory: 
