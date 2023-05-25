@@ -3,16 +3,11 @@
 
 ## 
 # Brain Tumor Classifier
-Brain Tumor Classifier is a web application that processes MRI scans to determine the type of tumor present (Glioma, Meningioma, Pituitary) or if there is no tumor present.
+'Brain Tumor Classifier' is an advanced web application powered by TensorFlow, designed to analyze MRI scans and accurately classify brain tumors. With a remarkable test accuracy of 92% and a low loss of 21%, this application provides reliable results.
 
+The primary objective of 'Brain Tumor Classifier' is to assist medical professionals in diagnosing and planning treatments for patients suspected of having brain tumors. By leveraging deep learning and neural networks, the application processes MRI scans, identifying tumor types such as Glioma, Meningioma, Pituitary, or detecting the absence of a tumor.
 
-## Function
-Brain Tumor Classifier is designed to assist in the classification of brain tumors using convolutional neural networks. The application takes an MRI scan as input and applies a trained ResNet152V2 model to predict the type of tumor or indicate the absence of a tumor. It provides a quick and convenient way to analyze MRI scans and obtain tumor classification results.
-
-
-## How to Use
-1. Upload an MRI scan (in PNG, JPG, or JPEG format).
-2. The application will analyze the scan and provide the predicted tumor type or indicate no tumor.
+Please note that 'Brain Tumor Classifier' is intended to support medical professionals and should not replace their expertise. It serves as a valuable tool for improving efficiency and contributing to better patient outcomes.
 
 
 ## Installation
