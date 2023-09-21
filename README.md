@@ -1,5 +1,5 @@
 
-![Brain Tumor Classifier](screenshot.png)
+![braintc](https://github.com/thebugged/brain-tumor-classifier/assets/74977495/14e9c010-6f81-4e29-b699-9f2edd18c174)
 
 ## 
 # Brain Tumor Classifier
