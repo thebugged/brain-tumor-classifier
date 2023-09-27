@@ -13,7 +13,7 @@ Please note that 'Brain Tumor Classifier' is intended to support medical profess
 ## Installation
 1. Clone the repository:
 ```shell
-git clone https://github.com/your-username/brain-tumor-classifier.git
+git clone https://github.com/thebugged/brain-tumor-classifier.git
 ```
 
 2. Change into the project directory: 
