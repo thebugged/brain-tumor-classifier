@@ -44,7 +44,7 @@ def app():
 
     def import_and_predict(image_data):
         size = (256, 256)
-        image1 = ImageOps.fit(image_data, size, Image.ANTIALIAS)
+        image1 = ImageOps.fit(image_data, size, Image.Resampling.LANCZOS)
         image1 = image1.convert('RGB')
         img = np.array(image1) / 255.0
         img_reshape = img[np.newaxis, ...]
