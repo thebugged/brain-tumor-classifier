@@ -29,6 +29,7 @@ There are more than 100 distinct types of primary brain tumors, each with its ow
 **Prerequisites**
 
 Ensure the following are installed;
+- [Git](https://git-scm.com/)
 - [Python](https://www.python.org/downloads/)
 - [Jupter Notebook](https://jupyter.org/install) (or install the Jupyter extension on Visual Studio Code).
 
