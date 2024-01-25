@@ -22,7 +22,7 @@ There are more than 100 distinct types of primary brain tumors, each with its ow
 </div>
 <br/>
 
-🗃️ The dataset can be accessed [here](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
+ [Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset) 🗃️
 
 
 ## Setup & Installation
