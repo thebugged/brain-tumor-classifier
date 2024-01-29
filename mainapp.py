@@ -1,45 +1,57 @@
 import sqlite3
 import numpy as np
-import pandas as pd
+# import pandas as pd
 import streamlit as st
+import tensorflow as tf
 
 from sqlite3 import Connection
 from PIL import Image, ImageOps
-from keras.models import load_model
+
+st.set_page_config(
+    page_title="Brain Tumour Classifier",
+    page_icon="🧠",
+    # layout="wide",
+    initial_sidebar_state="auto",
+)
 
 URI_SQLITE_DB = "predictions.db"
-
-st.set_page_config(page_title="BTC", page_icon="favicon.png")
 
 def init_db(conn: Connection):
     conn.execute('CREATE TABLE IF NOT EXISTS userstable(PREDICTION TEXT)')
     conn.commit()
-    
-
-def build_sidebar():
-    st.sidebar.markdown("### Function")
-    st.sidebar.markdown("Brain Tumor Classifier is a web application that processes MRI scans to determine the type of tumor present (Glioma, Meningioma, Pituitary) or if there is no tumor present.")
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("### How to Use")
-    st.sidebar.markdown("1. Upload an MRI scan (in PNG, JPG, or JPEG format).")
-    st.sidebar.markdown("2. The application will analyze the scan and provide the predicted tumor type or indicate no tumor.")
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("### Output")
-    st.sidebar.markdown("The application will display the predicted tumor type or indicate no tumor.")
 
 def app():
-    model = load_model('resnet.h5')
+    interpreter = tf.lite.Interpreter(model_path='brain.tflite')
+    interpreter.allocate_tensors()
 
-    st.title("Brain Tumor Classifier")
-    st.markdown("")
-    st.markdown("")
+    input_details = interpreter.get_input_details()
+    output_details = interpreter.get_output_details()
+    print(output_details)
 
-    st.markdown("<h4 style='text-align: center;'>Upload the MRI Scan and get Result</h4>", unsafe_allow_html=True)
+    st.subheader("Brain Tumor Classifier", divider='grey')
+    st.markdown("")
+    st.caption("Upload an image to determine the type of tumor")
+
+    with st.sidebar:
+        st.header("Brain Tumors?")
+
+        with st.expander("About "):
+            st.write("A brain tumor is a mass or growth of abnormal cells in the brain. Tumors can be either benign (non-cancerous) "
+                    "or malignant (cancerous). They can originate in the brain itself or spread from other parts of the body.")
+
+        with st.expander("Symptoms and Signs "):
+            st.write("Common symptoms of brain tumors include headaches, seizures, changes in vision, difficulty speaking or "
+                    "understanding speech, and changes in mood or personality.")
+
+        with st.expander("How to Monitor Brain Health and Seek Help"):
+            st.write("1. Regular medical check-ups and screenings can help monitor brain health.\n"
+                    "2. Pay attention to any unusual symptoms and seek medical advice if you notice persistent changes.\n"
+                    "3. Early detection and treatment are crucial for better outcomes.")
+
 
     file = st.file_uploader("Please upload your MRI Scan", type=["png", "jpg", "jpeg"])
 
     conn = get_connection(URI_SQLITE_DB)
-    build_sidebar()
     init_db(conn)
 
     def import_and_predict(image_data):
@@ -48,15 +60,20 @@ def app():
         image1 = image1.convert('RGB')
         img = np.array(image1) / 255.0
         img_reshape = img[np.newaxis, ...]
-        img_reshape = img.reshape(1, 256, 256, 3)
-        prediction = model.predict(img_reshape)
+
+        # Prepare input data for TensorFlow Lite model
+        interpreter.set_tensor(input_details[0]['index'], img_reshape.astype(np.float32))
+        interpreter.invoke()
+
+        # Get the output from TensorFlow Lite model
+        prediction = interpreter.get_tensor(output_details[0]['index'])
+
         return prediction
 
     labels = ['pituitary', 'notumor', 'glioma', 'meningioma']
 
-    if file is None:
-        st.markdown("<h5 style='text-align: center;'>Please Upload a File</h5>", unsafe_allow_html=True)
-    else:
+
+    if file is not None:
         image = Image.open(file)
         st.image(image, width=300)
         predictions = import_and_predict(image)
@@ -65,16 +82,9 @@ def app():
         string = "The patient most likely has " + predictions
         st.success(string)
 
-    st.sidebar.markdown("", unsafe_allow_html=True)
-    st.sidebar.markdown("", unsafe_allow_html=True)
-    st.sidebar.markdown("", unsafe_allow_html=True)
-    st.sidebar.markdown("", unsafe_allow_html=True)
-
-
 @st.cache_resource
 def get_connection(path: str):
     return sqlite3.connect(path, check_same_thread=False)
-
 
 if __name__ == '__main__':
     app()

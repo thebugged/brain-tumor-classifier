@@ -51,12 +51,13 @@ pip install -r requirements.txt
 ```
 <br/>
 
-## Running the App
-1. Run the `ResNet152V2.ipynb` notebook to get the `resnet.h5` file to run the aplication. You can also downlaod the saved model [here](https://mega.nz/folder/46QwiSCY#kTgCWkBJFQ1durISD71zqQ).
-
-2. Make sure the `resnet.h5` and `mainapp.py` are in the same directory then run the  streamlit application using the command: 
+## Running the application
+1. Run the command: 
 ```shell
 streamlit run mainapp.py
 ```
+2. Alternatively, you can run the `brain.ipynb` notebook to get the `brain.tflite` model then run the command in 1.
+
 The application will be available in your browser at http://localhost:8501.
+
 
