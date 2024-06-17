@@ -62,5 +62,6 @@ streamlit run mainapp.py
 2. Alternatively, you can run the `brain.ipynb` notebook to get the model & weights (`brain_model.json`, `brain_weights.h5`) then run the command in 1.
 
 The application will be available in your browser at http://localhost:8501.
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://brain-tumor-classifier.streamlit.app)
 
