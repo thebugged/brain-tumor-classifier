@@ -17,12 +17,14 @@
   <h3 align="center">Brain Tumor Classifier</h3>
 
    <div align="center">
-There are more than 100 distinct types of primary brain tumors, each with its own spectrum of presentations, treatments, and outcomes. This app processes MRI scans to identify various tumor types.
+This application processes MRI scans to identify and classify brain tumors into three categories: Pituitary, Glioma, and Meningioma.
     </div>
 </div>
 <br/>
 
- [Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset) 🗃️
+**Dataset(s)** 🗃️
+- [Brain Tumor MRI Dataset
+](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset) 
 
 
 ## Setup & Installation
@@ -31,8 +33,9 @@ There are more than 100 distinct types of primary brain tumors, each with its ow
 Ensure the following are installed;
 - [Git](https://git-scm.com/)
 - [Python](https://www.python.org/downloads/)
-- [Jupter Notebook](https://jupyter.org/install) (or install the Jupyter extension on Visual Studio Code).
+- [Jupter Notebook](https://jupyter.org/install) (or install the Jupyter extension on [Visual Studio Code](https://code.visualstudio.com/)).
 
+<br/>
 To set up this project locally, follow these steps:
 
 1. Clone the repository:
@@ -56,8 +59,8 @@ pip install -r requirements.txt
 ```shell
 streamlit run mainapp.py
 ```
-2. Alternatively, you can run the `brain.ipynb` notebook to get the `brain.tflite` model then run the command in 1.
+2. Alternatively, you can run the `brain.ipynb` notebook to get the model & weights (`brain_model.json`, `brain_weights.h5`) then run the command in 1.
 
 The application will be available in your browser at http://localhost:8501.
-
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://brain-tumor-classifier.streamlit.app)
 
