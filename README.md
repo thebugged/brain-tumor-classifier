@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://brain-tumor-classifier.streamlit.app">
-      <img src="https://github.com/thebugged/brain-tumor-classifier/assets/74977495/66062708-2ed4-4a79-b17a-7db89bf697a7" alt="Banner">
+      <img src="https://github.com/thebugged/brain-tumor-classifier/assets/74977495/3a121c78-9942-412c-acef-4108ad1273b4" alt="Banner">
     </a>
   <br />
 
